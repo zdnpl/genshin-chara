@@ -1,0 +1,87 @@
+.eula-box {
+  position: relative;
+  background-color: #1163f6;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.eula-box::before {
+  content: "GENSHIN";
+  position: absolute;
+  color: #fff;
+  font-size: 4.5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.eula-box:hover::before {
+  opacity: 0.2;
+}
+
+.eula-box::after {
+  content: "IMPACT";
+  position: absolute;
+  color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 330px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.eula-box:hover::after {
+  opacity: 0.2;
+}
+
+.chara-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate3d(0, 0, 75px);
+}
+
+.eula-box:hover .chara-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.detail-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 76px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.eula-box:hover .detail-btn {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.eula-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -53%, 75px) scale(0.9);
+  max-width: 350px;
+  transition: 0.5s;
+}
+
+.eula-box:hover .eula-img {
+  transform: translate3d(-50%, -53%, 75px) rotate(-5deg) scale(1.1);
+}
